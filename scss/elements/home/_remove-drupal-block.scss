@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------
+// ----------------------- remove drupal contextual block, home ----------------------- //
+
+// container general
+div[role="main"]{
+	
+	.row{
+	
+		.region-content{
+			
+			>.views-element-container{
+				display: none;
+			}
+			
+		}
+		
+	}
+	
+}

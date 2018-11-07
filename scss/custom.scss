@@ -1,0 +1,31 @@
+// ------------------------------------ Global elements ------------------------------------ 
+//@import 'bootstrap';
+@import 'fonts';
+
+// ------------------------------------ Mixins escuela creativa ------------------------------------ 
+@import 'elements/mixins/_mixins';
+@import 'elements/mixins/_buttons';
+
+@import 'config';
+@import 'artifacts';
+@import 'layout';
+@import 'animate';
+@import 'base';
+
+
+
+
+// ------------------------------------ Custom styles ------------------------------------ 
+@import 'elements/general/_header';
+@import 'elements/general/_footer';
+@import 'elements/general/_working-papers-banners';
+@import 'elements/general/_working-papers-bg';
+@import 'elements/general/_results-content';
+@import 'elements/general/_results-search';
+@import 'elements/general/_nav-numbers';
+
+
+// ------------------------------------ Pages styles home ------------------------------------ 
+@import 'elements/home/_remove-drupal-block';
+
+// ------------------------------------ Pages ------------------------------------ 

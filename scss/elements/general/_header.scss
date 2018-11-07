@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------
+// ----------------------- header ----------------------- //
+
+// container general
+header.navbar.container{
+	
+	background: none;
+	border: 0px;
+	margin-bottom: 0;
+	
+	.navbar-header{
+		float: none;
+		
+		.cabezote-logo{
+			text-align: center;
+			
+			img{
+				display: initial;
+				border-bottom: 6px solid $color_orange;
+			}
+			
+		}
+		
+	}
+	
+}

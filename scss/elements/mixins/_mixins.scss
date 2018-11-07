@@ -1,0 +1,338 @@
+// -----------------------------------------------------------------------
+// ----------------------- vistas cursos  ----------------------- //
+@mixin left-content-space{
+	padding-left: 5rem;
+	@media only screen and (max-width: $breakpoint_2){
+		padding-left: 3.5rem;
+	}
+}
+
+@mixin left-content-result{
+	@include inline-block(top);
+	@include grid-porcentaje(7);
+	padding-left: 0;
+	float: left;
+	@media only screen and (max-width: $breakpoint_2){
+		@include inline-block(top);
+		@include grid-porcentaje(6);
+		padding-left: 0;
+	}
+	
+	@media only screen and (max-width: 630px){
+		@include inline-block(top);
+		@include grid-porcentaje(12);
+		padding-left: 0;
+	}
+}
+
+@mixin right-content-result{
+	@include inline-block(top);
+	@include grid-porcentaje(4);
+	float: right;
+	position: relative;
+	
+	@media only screen and (max-width: $breakpoint_2){
+		@include inline-block(top);
+		@include grid-porcentaje(4);
+	}
+	
+	@media only screen and (max-width: 630px){
+		@include inline-block(top);
+		@include grid-porcentaje(12);
+		@include left-content-space;
+	}
+	
+	&::after {
+	    content: "";
+	    //background: url(../images/assets/noise.png) $color_orange_light;
+	    border-left: 1px solid $color_gray_15;
+	    display: block;
+	    width: 100%;
+		height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: -5%;
+	    
+	    @media only screen and (max-width: $breakpoint_4){
+		    display: none;
+	    }
+	}
+}
+
+// -----------------------------------------------------------------------
+// ----------------------- links - enlaces  ----------------------- //
+
+@mixin links-hover{
+	&:after{
+		position: absolute;
+		content: "";
+		height: 2px;
+		width: 0%;
+		left: 0%;
+		background: $color_brand;
+		bottom: 0%;
+		visibility: hidden;
+	}
+	&:hover, &:focus{
+		text-decoration: none;
+		color: $color_brand;
+		&:after{
+			visibility: visible;
+			width: 100%;
+			bottom: 0%;
+		}
+	}
+}
+
+@mixin links-hover-white{
+	&:after{
+		position: absolute;
+		content: "";
+		height: 2px;
+		width: 0%;
+		left: 0%;
+		background: $color_brand_white;
+		bottom: 0%;
+		visibility: hidden;
+	}
+	&:hover, &:focus{
+		text-decoration: none;
+		color: $color_brand_white;
+		&:after{
+			visibility: visible;
+			width: 100%;
+			bottom: 0%;
+		}
+	}
+}
+
+@mixin links{
+	color: $color_brand;
+	font-family: $font-AG-regular;
+	position: relative;
+	word-break: break-word;
+	&:hover{
+		text-decoration: none;
+	}
+	@include links-hover;
+}
+
+@mixin links-white{
+	color: $color_brand_white;
+	font-family: $font-AG-regular;
+	position: relative;
+	word-break: break-word;
+	&:hover{
+		text-decoration: none;
+	}
+	@include links-hover-white;
+}
+
+@mixin links-menu{
+	color: $color-font;
+	font-family: $font-AG-regular;
+	position: relative;
+	&:hover{
+		text-decoration: none;
+	}
+	
+	&:after{
+		position: absolute;
+	    content: "";
+	    height: 6px;
+	    width: 0%;
+	    left: 0%;
+	    background: url(../images/svg/menu-hover.svg);
+	    background-repeat: no-repeat;
+	    bottom: 4%;
+	    visibility: hidden;
+	}
+	&:hover, &:focus{
+		text-decoration: none;
+		//color: $color_brand;
+		&:after{
+			visibility: visible;
+			width: 100%;
+			//bottom: 0%;
+		}
+	}
+	
+}
+
+
+
+// -----------------------------------------------------------------------
+// ----------------------- resultados content  ----------------------- //
+@mixin resultados{
+	.views-row{
+						
+	padding: 4rem;
+	border-bottom: 1px solid $color_gray_50;
+	display: inline-block;
+	
+	@media only screen and (max-width: $breakpoint_2){
+		padding: 2rem;
+	}
+	
+	// # volumen
+	.views-field-field-volumen{
+		text-transform: uppercase;
+		font-family: $font-baseb;
+		letter-spacing: 1.8px;
+		font-size: 9px;
+		//max-width: 5rem;
+		//float: left;
+	}
+	
+	// # Nº
+	.views-field-field-numero{
+		
+		max-width: 5rem;
+		float: left;
+		
+		.views-label{
+			text-transform: uppercase;
+			font-family: $font-baseb;
+			letter-spacing: 1.8px;
+			font-size: 9px;
+		}
+		
+		.field-content{
+			text-transform: uppercase;
+			font-family: $font-brandb;
+			border-bottom: 5px solid $color_brand;
+			font-size: $font-brandb-l;
+		}
+		
+	}
+	
+	// issn
+	.views-field-field-isbn-issn{
+		@include left-content-space;
+		font: $font-txt-l $font-AG-regular;
+		margin-top: -1.8rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	// fecha texto
+	.views-field-field-fecha-texto{
+		//@include left-content-space;
+		margin-left: 2.9rem;
+		font: $font-baser-xs $font-baseb;
+		color: $color_gray_50;
+		border-right: 1px solid;
+	    display: table;
+	    padding-right: 1rem;
+	    letter-spacing: 2px;
+	    text-transform: uppercase;
+		float: left;
+		
+		@media only screen and (max-width: $breakpoint_2){
+			margin-left: 1.5rem;
+		}
+	}
+	
+	// año numero
+	.views-field-field-ano-numero{
+		//@include left-content-space;
+		font: $font-baser-xs $font-baseb;
+		color: $color_gray_50;
+		//border-right: 1px solid;
+	    display: table;
+	    padding-left: 1rem;
+	    letter-spacing: 2px;
+	    text-transform: uppercase;
+	}
+	
+	// title
+	.views-field-title{
+		@include left-content-space;
+		font: $font-titles $font-AG-black;
+		line-height: $font-bl-l;
+		margin-bottom: 1.5rem;
+		max-width: 760px;
+	}
+	
+	// grupos de investigacion
+	.views-field-field-grupo-de-investigacion{
+		@include left-content-result;
+		@include left-content-space;
+		
+		.views-label-field-grupo-de-investigacion{
+			font: $font-txt-l $font-baseb;
+			display: inline-block;
+			margin-right: 0.5rem;
+		}
+		
+		.field-content{
+			font: $font-txt-l $font-baser;
+			display: inline-block;
+		}
+		
+	}
+	
+	// bocadillo
+	.views-field-field-bocadillo{
+		@include left-content-result;
+		@include left-content-space;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	// btn descargar
+	.views-field-field-descargar{
+		@include left-content-result;
+		@include left-content-space;
+		
+		@media only screen and (max-width: $breakpoint_2){
+			float:none;
+			@include grid-porcentaje(12);
+			padding-left: 3.5rem;
+		}
+		
+		a{
+			@include buton-s-green-line;
+		}
+		
+	}
+	
+	/////////////// right elements
+	// editor
+	.views-field-field-editor{
+		@include right-content-result;
+		font-family: $font-serif-italic;
+		
+		@media only screen and (max-width: $breakpoint_4){
+			margin-top: 1.5rem;
+		}
+		
+		.views-label-field-editor{
+			//font-wei: $font-serif-italic;
+		}
+		
+		.field-content{
+			font-weight: bolder;
+		}
+		
+	}
+	
+	// autor
+	.views-field-field-autor-es-{
+		@include right-content-result;
+		margin-top: 1.5rem;
+		font-family: $font-serif-italic;
+		font-size: $font-baser-m;
+		
+		@media only screen and (max-width: $breakpoint_4){
+			margin-bottom: 1.5rem;
+			margin-top: 0rem;
+		}
+	}
+	
+	// año resultado
+	div[ class*="views-field-field-ano-numero-"]{
+		display: none;
+	}
+	
+}
+}

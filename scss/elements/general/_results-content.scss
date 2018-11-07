@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------
+// ----------------------- working papers results content ----------------------- //
+
+// container general
+div[role="main"]{
+	
+	.row{
+	
+		.region-content{
+			
+			.publicaciones-home{
+					
+				padding: 0;
+				
+				@include resultados;
+				
+			}
+			
+		}
+		
+	}
+	
+}

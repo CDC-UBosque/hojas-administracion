@@ -9,12 +9,12 @@
 
 @mixin left-content-result{
 	@include inline-block(top);
-	@include grid-porcentaje(7);
+	@include grid-porcentaje(12);
 	padding-left: 0;
 	float: left;
 	@media only screen and (max-width: $breakpoint_2){
 		@include inline-block(top);
-		@include grid-porcentaje(6);
+		@include grid-porcentaje(12);
 		padding-left: 0;
 	}
 	
@@ -166,29 +166,85 @@
 @mixin resultados{
 	.views-row{
 						
-	padding: 4rem;
+	padding: 3rem 4rem;
 	border-bottom: 1px solid $color_gray_50;
 	display: inline-block;
+	position: relative;
 	
 	@media only screen and (max-width: $breakpoint_2){
 		padding: 2rem;
 	}
 	
 	// # volumen
+	//.views-field-field-volumen{
+	//	text-transform: uppercase;
+	//	font-family: $font-baseb;
+	//	letter-spacing: 1.8px;
+	//	font-size: 9px;
+	//	//max-width: 5rem;
+	//	//float: left;
+	//}
+	
+	// # Nº volumen
 	.views-field-field-volumen{
+		
+		max-width: 2rem;
 		text-transform: uppercase;
 		font-family: $font-baseb;
 		letter-spacing: 1.8px;
 		font-size: 9px;
-		//max-width: 5rem;
-		//float: left;
+		float: left;
+		position: absolute;
+		//border: 1px solid red;
+		bottom: 11rem;
+		
+		&::after {
+		    content: "";
+		    border-left: 1px solid $color_gray_50;
+		    display: block;
+		    width: 100%;
+		    height: 270%;
+		    position: absolute;
+		    top: 0;
+		    right: -140%;
+		    
+		    @media only screen and (max-width: $breakpoint_4){
+			    //display: none;
+		    }
+		}
+		
+		.views-label{
+			text-transform: uppercase;
+			font-family: $font-baseb;
+			letter-spacing: 1.8px;
+			font-size: 9px;
+		}
+		
+		.field-content{
+			text-transform: uppercase;
+			font-family: $font-brandb;
+			border-bottom: 5px solid $color_brand;
+			font-size: $font-brandb-l;
+		}
+		
 	}
 	
 	// # Nº
 	.views-field-field-numero{
 		
 		max-width: 5rem;
+		text-transform: uppercase;
+		font-family: $font-baseb;
+		letter-spacing: 1.8px;
+		font-size: 9px;
 		float: left;
+		//position: relative;
+	    //top: 8rem;
+	    //left: -2rem;
+	    position: absolute;
+		//border: 1px solid blue;
+		bottom: 0rem;
+		margin-bottom: 3rem;
 		
 		.views-label{
 			text-transform: uppercase;
@@ -216,8 +272,8 @@
 	
 	// fecha texto
 	.views-field-field-fecha-texto{
-		//@include left-content-space;
-		margin-left: 2.9rem;
+		@include left-content-space;
+		//margin-left: 1rem;
 		font: $font-baser-xs $font-baseb;
 		color: $color_gray_50;
 		border-right: 1px solid;
@@ -250,7 +306,7 @@
 		font: $font-titles $font-AG-black;
 		line-height: $font-bl-l;
 		margin-bottom: 1.5rem;
-		max-width: 760px;
+		//max-width: 760px;
 	}
 	
 	// grupos de investigacion

@@ -1,0 +1,189 @@
+// -----------------------------------------------------------------------
+// ----------------------- hojas admin banner top ----------------------- //
+
+// container general
+div[role="main"]{
+	
+	//padding: 3rem;
+	
+	.row{
+		//max-width: 980px;
+		//margin: auto;
+		
+		.highlighted{
+			overflow: hidden;
+			    background: $color_gray_5;
+			
+			.cabezote-destacado-home{
+				background: $color_brand_white;
+				margin: 0rem 8rem 2rem;
+				color: $color_text;
+				//background: url(../images/assets/noise.png) $color_orange_light;
+				position: relative;
+				border-bottom: 1px solid $color_gray_50;
+				
+				&::before,
+				&::after {
+				    content: "";
+				    background: url(../images/assets/noise.png) $color_orange_light;
+				    display: block;
+				    width: 8rem;
+				    height: 100%;
+				    position: absolute;
+				    top: -11%;
+				    left: 100%;
+				    
+				    @media only screen and (max-width: $breakpoint_2){
+					 	width: 3rem;
+					 }
+				}
+				
+				&::after {
+				    left: auto;
+				    right: 100%;
+				}
+				
+				@media only screen and (max-width: $breakpoint_2){
+					margin: 0rem 3rem 2rem;
+				}
+				
+				@include resultados;
+				
+				.view-content{
+					display: flex;
+				}
+				
+				.views-row{
+					padding: 0;
+					border-bottom: 0px;
+					
+					@media only screen and (max-width: $breakpoint_3-5){
+						padding: 0 2rem;
+					}
+					
+					// Image
+					.views-field-field-imagen{
+						@include inline-block(top);
+						@include grid-porcentaje(6);
+						//max-width: initial;
+						padding-left: 0;
+						float: left;
+						
+						img{
+							width: 100%;
+						}
+						
+						@media only screen and (max-width: $breakpoint_3-5){
+							@include grid-porcentaje(12);
+							max-width: initial;
+							padding-left: 0;
+							padding-right: 0;
+							float: none;
+							width: calc(100% + 4rem);
+							margin-left: -2rem;
+						}
+					}
+					
+					// # Nº volumen
+					.views-field-field-volumen{
+						right: 47%;
+						
+						@media only screen and (max-width: $breakpoint_3-5){
+							right: initial;
+						}
+					}
+					
+					// # Nº
+					.views-field-field-numero{
+						right: 47%;
+						
+						@media only screen and (max-width: $breakpoint_3-5){
+							right: initial;
+						}
+					}
+					
+					// issn
+					.views-field-field-isbn-issn{
+						display: table;
+						margin-top: 2rem;
+						
+						@media only screen and (max-width: $breakpoint_3-5){
+							display: block;
+						}
+					}
+					
+					// fecha texto
+					.views-field-field-fecha-texto{
+					}
+					
+					// año numero
+					.views-field-field-ano-numero{
+					}
+					
+					// title
+					.views-field-title{
+						display: table;
+						
+						@media only screen and (max-width: $breakpoint_3-5){
+							display: block;
+						}
+					}
+					
+					// grupos de investigacion
+					.views-field-field-grupo-de-investigacion{
+						@include inline-block(top);
+						@include grid-porcentaje(6);
+						
+						float: left;
+						
+						@media only screen and (max-width: $breakpoint_3-5){
+							@include grid-porcentaje(12);
+							float: none;
+						}
+						
+						@include left-content-space;
+					}
+					
+					// bocadillo
+					.views-field-field-bocadillo{
+						@include inline-block(top);
+						@include grid-porcentaje(6);
+						
+						float: left;
+						
+						@media only screen and (max-width: $breakpoint_3-5){
+							@include grid-porcentaje(12);
+							float: none;
+						}
+						
+						@include left-content-space;
+					}
+					
+					// btn descargar
+					.views-field-field-descargar{
+						@include inline-block(top);
+						@include grid-porcentaje(6);
+						
+						float: right;
+						
+						@media only screen and (max-width: $breakpoint_1){
+							margin-bottom: 1rem;
+						}
+						
+						@media only screen and (max-width: $breakpoint_3-5){
+							@include grid-porcentaje(12);
+							float: none;
+						}
+						
+						@include left-content-space;
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

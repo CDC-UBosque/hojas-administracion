@@ -1,5 +1,8 @@
 // -----------------------------------------------------------------------
 // ----------------------- header ----------------------- //
+html{
+	overflow-x: hidden;
+}
 
 // container general
 header.navbar.container{
@@ -7,6 +10,7 @@ header.navbar.container{
 	background: none;
 	border: 0px;
 	margin-bottom: 0;
+	min-height: auto;
 	
 	.navbar-header{
 		float: none;
@@ -17,6 +21,7 @@ header.navbar.container{
 			img{
 				display: initial;
 				border-bottom: 6px solid $color_orange;
+				padding: 1rem 1rem 2rem;
 			}
 			
 		}

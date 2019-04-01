@@ -63,15 +63,27 @@ div[role="main"]{
 					
 					// Image
 					.views-field-field-imagen{
+						height: 100%;
 						@include inline-block(top);
 						@include grid-porcentaje(6);
-						//max-width: initial;
 						padding-left: 0;
 						float: left;
 						
-						img{
-							width: 100%;
+						@media only screen and (max-width: $breakpoint_3-5){
+							height: auto;
 						}
+						
+						div{
+							height: 100%;
+							
+							img{
+								width: 100%;
+								object-fit: cover;
+								height: 100%;
+							}
+						
+						}
+						
 						
 						@media only screen and (max-width: $breakpoint_3-5){
 							@include grid-porcentaje(12);
@@ -86,7 +98,11 @@ div[role="main"]{
 					
 					// # Nº volumen
 					.views-field-field-volumen{
-						right: 47%;
+						right: 45%;
+						
+						@media only screen and (max-width: $breakpoint_2){
+							right: 44%;
+						}
 						
 						@media only screen and (max-width: $breakpoint_3-5){
 							right: initial;
@@ -95,11 +111,16 @@ div[role="main"]{
 					
 					// # Nº
 					.views-field-field-numero{
-						right: 47%;
+						right: 45%;
+						
+						@media only screen and (max-width: $breakpoint_2){
+							right: 44%;
+						}
 						
 						@media only screen and (max-width: $breakpoint_3-5){
 							right: initial;
 						}
+						
 					}
 					
 					// issn
@@ -118,6 +139,22 @@ div[role="main"]{
 					
 					// año numero
 					.views-field-field-ano-numero{
+					}
+					
+					// Hojas de administracion titulo
+					.views-field-field-label-boletin{
+						@include inline-block(top);
+						@include grid-porcentaje(6);
+						
+						float: left;
+						
+						@media only screen and (max-width: $breakpoint_3-5){
+							@include grid-porcentaje(12);
+							float: none;
+						}
+						
+						@include left-content-space;
+						
 					}
 					
 					// title

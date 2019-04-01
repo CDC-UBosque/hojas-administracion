@@ -49,6 +49,9 @@ div[role="main"]{
 					letter-spacing: 5.5px;
 					text-transform: uppercase;
 					line-height: $font-titles-xl;
+					word-break: break-word;
+					padding: 0 1rem;
+
 					
 					&:last-child{
 						font-family: $font-AG-black;

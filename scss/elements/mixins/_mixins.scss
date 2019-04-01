@@ -1,9 +1,9 @@
 // -----------------------------------------------------------------------
 // ----------------------- vistas cursos  ----------------------- //
 @mixin left-content-space{
-	padding-left: 5rem;
+	padding-left: 7rem;
 	@media only screen and (max-width: $breakpoint_2){
-		padding-left: 3.5rem;
+		padding-left: 6.5rem;
 	}
 }
 
@@ -188,7 +188,7 @@
 	// # Nº volumen
 	.views-field-field-volumen{
 		
-		max-width: 2rem;
+		//max-width: 2rem;
 		text-transform: uppercase;
 		font-family: $font-baseb;
 		letter-spacing: 1.8px;
@@ -197,6 +197,7 @@
 		position: absolute;
 		//border: 1px solid red;
 		bottom: 11rem;
+		display: inline-block;
 		
 		&::after {
 		    content: "";
@@ -206,7 +207,7 @@
 		    height: 270%;
 		    position: absolute;
 		    top: 0;
-		    right: -140%;
+		    right: -5rem;
 		    
 		    @media only screen and (max-width: $breakpoint_4){
 			    //display: none;
@@ -284,7 +285,24 @@
 		float: left;
 		
 		@media only screen and (max-width: $breakpoint_2){
-			margin-left: 1.5rem;
+			//margin-left: 1.5rem;
+		}
+	}
+	
+	// hojas de administracion
+	.views-field-field-label-boletin{
+		@include left-content-space;
+		//margin-left: 1rem;
+		font: $font-baser-xs $font-baseb;
+		color: $color_gray_50;
+	    display: table;
+	    padding-right: 1rem;
+	    letter-spacing: 2px;
+	    text-transform: uppercase;
+		float: left;
+		
+		@media only screen and (max-width: $breakpoint_2){
+			//margin-left: 1.5rem;
 		}
 	}
 	
@@ -305,8 +323,9 @@
 		@include left-content-space;
 		font: $font-titles $font-AG-black;
 		line-height: $font-bl-l;
-		margin-bottom: 1.5rem;
-		//max-width: 760px;
+		margin-bottom: 0;
+		display: inline-block;
+		margin-top: 1rem;
 	}
 	
 	// grupos de investigacion
@@ -343,7 +362,7 @@
 		@media only screen and (max-width: $breakpoint_2){
 			float:none;
 			@include grid-porcentaje(12);
-			padding-left: 3.5rem;
+			padding-left: 6.5rem;
 		}
 		
 		a{
